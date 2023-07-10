@@ -19,6 +19,14 @@
 <!-- Header -->
         <header class="header">
           <div class="container container-nav">
+                 <a class="logo"
+                  href="./index.html">Web<span class="color-header-logo">Studio</span>
+                </a>
+                <span class="menu-burger">
+                  <svg class="menu-icon" width="32" height="22">
+                    <use href="./images/icons.svg#menu"></use>
+                  </svg>
+                </span>
               <nav class="header-page-nav">
                 <a class="logo"
                   href="./index.html">Web<span class="color-header-logo">Studio</span>
@@ -65,6 +73,7 @@
   
 <!-- Main content -->
       <main>
+
 <!-- Hero section -->
         <section class="section-hero">
           <div class="container">
@@ -83,8 +92,8 @@
             <h2 class="visually-hidden">Advantages</h2>
             <ul class="benefits-list">
               <li class="benefits-list-item">
-                <div class="container-bg">
-                   <svg class="icon" width="64" height="64">
+                <div class="container-bg hidden-mobail">
+                   <svg class="benefits-icon" width="64" height="64">
                           <use href="./images/icons.svg#antenna"></use>
                    </svg>
                 </div>
@@ -94,8 +103,8 @@
                   </p>
               </li>
               <li class="benefits-list-item">
-                <div class="container-bg">
-                  <svg class="icon" width="64" height="64">
+                <div class="container-bg hidden-mobail">
+                  <svg class="benefits-icon" width="64" height="64">
                           <use href="./images/icons.svg#clock"></use>
                    </svg>
                 </div>
@@ -105,8 +114,8 @@
                   </p>
               </li>
               <li class="benefits-list-item">
-                <div class="container-bg">
-                  <svg class="icon" width="64" height="64">
+                <div class="container-bg hidden-mobail">
+                  <svg class="benefits-icon" width="64" height="64">
                           <use href="./images/icons.svg#diagram"></use>
                    </svg>
                 </div>
@@ -116,8 +125,8 @@
                   </p>
               </li>
               <li class="benefits-list-item">
-                <div class="container-bg">
-                  <svg class="icon" width="64" height="64">
+                <div class="container-bg hidden-mobail">
+                  <svg class="benefits-icon" width="64" height="64">
                           <use href="./images/icons.svg#astronaut"></use>
                    </svg>
                 </div>
@@ -130,25 +139,28 @@
           </div>
         </section>
   
-  <!--Section 3 What are we doing-->
+<!--Section 3 What are we doing-->
         <section class="section-made">
           <div class="container">
             <h2 class="section-title">What are we doing</h2>
             <ul class="made-list">
               <li class="made-items">
                 <img class="card-img"
+                  srcset="./images/section_3/img-1.jpg 1x, ./images/section_3/img-1@2x.jpg 2x"
                   src="./images/section_3/img-1.jpg"
                   alt="Software"
                   width="360">
               </li>
               <li class="made-items">
                 <img class="card-img"
+                  srcset="./images/section_3/img-2.jpg 1x, ./images/section_3/img-2@2x/jpg 2x"
                   src="./images/section_3/img-2.jpg"
                   alt="WhatsApp chats"
                   width="360">
               </li>
               <li class="made-items">
                 <img class="card-img"
+                  srcset="./images/section_3/img-3.jpg 1x, ./images/section_3/img-3@2x/jpg 2x"
                   src="./images/section_3/img-3.jpg"
                   alt="Nice design in phone and web page. The phone is held in the hand."
                   width="360">
@@ -164,6 +176,7 @@
             <ul class="team-list">
               <li class="team-list-bg">
                 <img class="card-img"
+                  srcset="./images/our_team/img-1.jpg 1x, ./images/our_team/img-1@2x.jpg 2x"
                   src="./images/our_team/img-1.jpg"
                   alt="Mark Guerrero's photo"
                   width="264">
@@ -171,28 +184,28 @@
                   <h3 class="list-title">Mark Guerrero</h3>
                   <p class="team-list-text">Product Designer</p>
                   <ul class="team-social-links">
-                    <li class="social-list-item">
+                    <li>
                       <a href="" class="social-link" target="_blank"  rel="noopener noreferrer">
                         <svg class="icon networks" width="16" height="16">
                           <use href="./images/icons.svg#instagram"></use>
                         </svg>
                       </a>
                     </li>
-                    <li class="social-list-item">
+                    <li>
                       <a href="" class="social-link" target="_blank"  rel="noopener noreferrer">
                         <svg class="icon networks" width="16" height="16">
                           <use href="./images/icons.svg#twitter"></use>
                         </svg>
                       </a>
                     </li>
-                    <li class="social-list-item">
+                    <li>
                       <a href="" class="social-link" target="_blank"  rel="noopener noreferrer">
                         <svg class="icon networks" width="16" height="16">
                           <use href="./images/icons.svg#facebook"></use>
                         </svg>
                       </a>
                     </li>
-                    <li class="social-list-item">
+                    <li>
                       <a href="" class="social-link" target="_blank"  rel="noopener noreferrer">
                         <svg class="icon networks" width="16" height="16">
                           <use href="./images/icons.svg#linkedin"></use>
@@ -204,6 +217,7 @@
               </li>
               <li class="team-list-bg">
                 <img class="card-img"
+                  srcset="./images/our_team/img-2.jpg 1x, ./images/our_team/img-2@2x.jpg 2x"
                   src="./images/our_team/img-2.jpg"
                   alt="Tom Ford's photo"
                   width="264">
@@ -211,7 +225,7 @@
                   <h3 class="list-title">Tom Ford</h3>
                   <p class="team-list-text">Frontend Developer</p>
                   <ul class="team-social-links">
-                    <li class="social-list-item">
+                    <li>
                       <a href="" class="social-link" target="_blank"  rel="noopener noreferrer">
                         <svg class="icon networks" width="16" height="16">
                           <use href="./images/icons.svg#instagram"></use>
@@ -244,46 +258,48 @@
               </li>
               <li class="team-list-bg">
                 <img class="card-img"
+                  srcset="./images/our_team/img-3.jpg 1x, ./images/our_team/img-3@2x.jpg 2x"
                   src="./images/our_team/img-3.jpg"
                   alt="Gamila Garcia's photo"
                   width="264">
                 <div class="team-card-text">
                   <h3 class="list-title">Camila Garcia</h3>
                   <p class="team-list-text">Marketing</p>
-                <ul class="team-social-links">
-                  <li class="social-list-item">
-                    <a href="social-link" target="_blank"  rel="noopener noreferrer">
-                      <svg class="icon networks" width="16" height="16">
-                        <use href="./images/icons.svg#instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="social-link" target="_blank"  rel="noopener noreferrer">
-                      <svg class="icon networks" width="16" height="16">
-                        <use href="./images/icons.svg#twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="social-link" target="_blank"  rel="noopener noreferrer">
-                      <svg class="icon networks" width="16" height="16">
-                        <use href="./images/icons.svg#facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="social-link" target="_blank"  rel="noopener noreferrer">
-                      <svg class="icon networks" width="16" height="16">
-                        <use href="./images/icons.svg#linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
+                  <ul class="team-social-links">
+                    <li>
+                      <a class="social-link" href="" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon networks" width="16" height="16">
+                          <use href="./images/icons.svg#instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="social-link" href="" target="_blank"  rel="noopener noreferrer">
+                        <svg class="icon networks" width="16" height="16">
+                          <use href="./images/icons.svg#twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="social-link" href="social-link" target="_blank"  rel="noopener noreferrer">
+                        <svg class="icon networks" width="16" height="16">
+                          <use href="./images/icons.svg#facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="social-link" href="" target="_blank"  rel="noopener noreferrer">
+                        <svg class="icon networks" width="16" height="16">
+                          <use href="./images/icons.svg#linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </li>
               <li class="team-list-bg">
                 <img class="card-img"
+                  srcset="./images/our_team/img-4.jpg 1x, ./images/our_team/img-4@2x.jpg 2x"
                   src="./images/our_team/img-4.jpg"
                   alt="Daniel Wilson's photo"
                   width="264">
@@ -291,7 +307,7 @@
                   <h3 class="list-title">Daniel Wilson</h3>
                   <p class="team-list-text">UI Designer</p>
                   <ul class="team-social-links">
-                    <li class="social-list-item">
+                    <li>
                       <a href="" class="social-link" target="_blank"  rel="noopener noreferrer">
                         <svg class="icon networks" width="16" height="16">
                           <use href="./images/icons.svg#instagram"></use>
@@ -440,18 +456,17 @@
         </div>
       </footer>
 
-      <!-- Modal window -->
+<!-- Modal window -->
       <div data-modal class="backdrop is-hidden">
         <div class="modal-callback">
-          <div class="modal-content">
-            <button class="close-button" type="button" data-modal-close>
+          <button class="close-button" type="button" data-modal-close>
               <svg class="icon-btn-close" width="8" height="8">
                 <use href="./images/icons.svg#close"></use>
               </svg>
-            </button>
-            <p class="modal-text">Leave your contacts and we will call you back</p>
-            <div class="form-container">
-              <form class="modal-form" autocomplete="on" novalidate>
+          </button>
+          <p class="modal-text">Leave your contacts and we will call you back</p>
+          <div class="form-container">
+            <form class="modal-form" autocomplete="on" novalidate>
                 <div class="form-row">
                   <label class="modal-form-label" for="user-name" >
                     Name
@@ -492,7 +507,7 @@
                   <textarea class="modal-form-comment" name="user-comment" id="user-comment" rows="6" placeholder="Text input"></textarea>
                 </div>
                 <div class="custom-checkbox">
-                  <input class="checkbox-input visually-hidden" type="checkbox" id="user-privacy" value="true" name="user-privacy" checked>
+                  <input class="checkbox-input visually-hidden" type="checkbox" id="user-privacy" value="true" name="user-privacy">
                   <label class="modal-form-checkbox option" for="user-privacy">
                   <span class="checkbox">
                     <svg class="icon-checkbox" width="10" height="8">
@@ -506,73 +521,11 @@
                 <button class="form-button" type="submit">
                   Send
                 </button>
-              </form>
-          <button class="modal-close" type="button" data-modal-close>
-            <svg class="icon-btn-close" width="8" height="8">
-              <use href="./images/icons.svg#close"></use>
-            </svg>
-          </button>
-          <p class="modal-text">Leave your contacts and we will call you back</p>
-          <form class="modal-form" autocomplete="on" novalidate>
-            <div class="form-row">
-              <label class="modal-form-label" for="user-name" >
-                Name
-              </label>
-              <div class="form-wrap">
-                <input class="modal-form-input" type="text" name="user-name" id="user-name" autofocus>
-                <svg class="form-icon" width="18" height="24">
-                  <use href="./images/icons.svg#person"></use>tr
-                </svg>
-              </div>
-            </div>
-            <div class="form-row">
-              <label class="modal-form-label" for="phone">
-                Phone
-              </label>
-              <div class="form-wrap">
-                <input class="modal-form-input" type="tel" name="phone" id="phone">
-                <svg class="form-icon" width="18" height="24">
-                  <use href="./images/icons.svg#phone"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="form-row">
-                <label class="modal-form-label" for="email_address" >
-                  Email
-                </label>
-                <div class="form-wrap">
-                  <input class="modal-form-input" type="text" name="email" id="email_address">
-                  <svg class="form-icon" width="18" height="24">
-                    <use href="./images/icons.svg#e-mail"></use>
-                  </svg>
-                </div>
-            </div>
-            <div class="comment-container">
-              <label class="modal-form-label" for="user-comment">
-                Comment
-              </label>
-              <textarea class="modal-form-comment" name="user-comment" id="user-comment" rows="6" placeholder="Text input"></textarea>
-            </div>
-            <div class="custom-checkbox">
-              <input class="checkbox-input visually-hidden" type="checkbox" id="user-privacy" value="true" name="user-privacy">
-              <label class="modal-form-checkbox" for="user-privacy">
-              <span class="checkbox">
-                <svg class="icon-checkbox" width="10" height="8">
-                    <use href="./images/icons.svg#checkbox"></use>
-                </svg>
-              </span>
-              I accept the terms and conditions of the 
-              <a class="checkbox-link" href="" target="_blank" rel="noopener noreferrer"> Privacy Policy</a>
-              </label>
-            </div>
-            <button class="form-button" type="submit">
-              Send
-            </button>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
-
-      
+   
 
 
   <script src="./js/modal.js"></script>
