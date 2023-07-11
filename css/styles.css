@@ -72,164 +72,393 @@ main {
     overflow: hidden;
 }
 
-/**
-  |============================
-  | Header
-        @media (min-width: 320px) and (max-width: 428px)
-  |============================
-*/
     .container {
         min-width: 320px;
         max-width: 428px;
-        padding: 0 15px;
+        padding: 0 16px;
         margin: 0 auto;
     }
 
-    .header {
-        padding: 24px 0;
-        align-items: center;
-        border-bottom: 1px solid var(--cornflower-color);
-        box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
     }
+}
+
+@media only screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding: 0 15px;
+    }
+}
+
+/**
+  |============================
+  | Header section
+            @media (min-width: 320px) and (max-width: 768px)
+  |============================
+*/
+.header {
+    padding: 24px 0;
+    align-items: center;
+    border-bottom: 1px solid var(--cornflower-color);
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+}
+
+.header-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: var(--iris-color);
+    text-transform: uppercase;
+}
+
+.color-header-logo {
+    color: var(--navy-blue-color);
+}
+
+.menu-burger {
+    display: inline;
+}
+
+.menu-icon {
+    fill: var(--navy-blue-color);
+    stroke: currentColor;
+}
+
+.container-nav {
+    display: none;
+}
+
+/**
+  |============================
+  | Header section 
+            @media (min-width: 768px) and (max-width: 1157px)
+  |============================
+*/
+
+@media only screen and (min-width: 768px) {
 
     .header-mobile {
+        display: none;
+    }
+
+    .container-nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+    .header {
+        padding: 0;
+    }
+
+    .header-page-nav {
+        display: flex;
+        align-items: center;
+    }
 
     .logo {
-        display: inline-block;
+        margin-right: 120px;
+    }
+
+    .page-nav-list {
+        display: flex;
+        gap: 40px;
+        position: relative;
+    }
+
+    .page-nav-link {
+        display: block;
         text-decoration: none;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 800;
-        font-size: 18px;
-        line-height: 1.17;
-        letter-spacing: 0.03em;
-        color: var(--iris-color);
-        text-transform: uppercase;   
-    }
-
-    .color-header-logo {
+        font-weight: 500;
+        padding: 24px 0;
         color: var(--navy-blue-color);
-    }
-    .menu-burger {
-        display: inline;
+        transition: color var(--transition-options);
     }
 
-    .menu-icon {
-        fill: var(--navy-blue-color);
-        stroke: currentColor;
+    .page-nav-link:hover,
+    .page-nav-link:focus {
+        color: var(--ocean-color);
     }
 
-    .container-nav {
-        display: none;
+    .nav-line-color {
+        position: relative;
+        color: var(--ocean-color);
     }
+
+    .nav-line-color::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -1px;
+        height: 4px;
+        width: 100%;
+        border-radius: 2px;
+        background-color: var(--ocean-color);
+    }
+
+    .contacts {
+        font-style: normal;
+    }
+
+    .contacts-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .contacts-link {
+        color: var(--slate-color);
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.48px;
+        transition: color var(--transition-options);
+    }
+
+    .contacts-link:hover,
+    .contacts-link:focus {
+        color: var(--ocean-color);
+    }
+}
 
 /**
   |============================
-  | Hero section 
-        @media (min-width: 320px) and (max-width: 428px)
+  | Header section
+            @media (min-width: 1158px)
   |============================
 */
 
-    .section-hero {
-        max-width: 428px;
+@media only screen and (min-width: 1158px) {
+
+    .contacts-list {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border-color: var(--navy-blue-color);
+        flex-direction: row;
+        gap: 40px;
+    }
+    .contacts-link {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.32px;
+    }
+}    
+
+/**
+  |============================
+  | Hero section
+            @media (min-width: 320px) and (max-width: 768px)
+  |============================
+*/
+
+.section-hero {
+    max-width: 428px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-color: var(--navy-blue-color);
+    background-image: linear-gradient(to bottom,
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+        url(../images/hero/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 112px 0;
+    margin: 0 auto;
+}
+
+@media screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx) {
+    .section-hero {
+        background-image: linear-gradient(to bottom,
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)), url(../images/hero/hero-bg@2x.jpg);
+    }
+}
+
+.hero-title {
+    color: var(--white-color);
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+    max-width: 320px;
+    margin-bottom: 72px;
+}
+
+.hero-button {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    background-color: var(--iris-color);
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--white-color);
+    border-radius: 4px;
+    min-width: 169px;
+    min-height: 56px;
+    transition: background-color var(--transition-options);
+}
+
+.hero-button:hover,
+.hero-button:focus {
+    background-color: var(--ocean-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+/**
+  |============================
+  | Hero section
+          @media (min-width: 768px) and (max-width: 1158px) 
+  |============================
+*/
+
+@media only screen and (min-width: 768px) {
+
+    .section-hero {
+        max-width: 768px;
+        padding-top: 40px;
         background-image: linear-gradient(to bottom,
                 rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url(../images/hero/hero-bg.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        padding: 112px 0;
-        margin: 0 auto;
+            url(../images/hero/hero-tablet.jpg);
     }
 
     @media screen and (min-resolution: 192dpi),
-        screen and (min-resolution: 2dppx) {
+    screen and (min-resolution: 2dppx) {
         .section-hero {
             background-image: linear-gradient(to bottom,
-            rgba(46, 47, 66, 0.7),
-            rgba(46, 47, 66, 0.7)), url(../images/hero/hero-bg@2x.jpg);
+                    rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)), url(../images/hero/hero-tablet@2x.jpg);
         }
     }
 
     .hero-title {
-        color: var(--white-color);
-        text-align: center;
-        text-transform: capitalize;
-        font-size: 36px;
-        line-height: 1.11;
-        letter-spacing: 0.72px;
-        max-width: 320px;
-        margin-bottom: 72px;
+        max-width: 496px;
+        font-size: 56px;
+        line-height: 1.07;
+        letter-spacing: 1.12px;
+    }
+}
+/**
+  |============================
+  | Hero section
+          @media (min-width: 1158px) 
+  |============================
+*/
+@media only screen and (min-width: 1158px) {
+    .section-hero {
+        max-width: 1440px;
+        padding: 188px 0;
+        background-image: linear-gradient(to bottom,
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/hero/bg.jpg);
     }
 
-    .hero-button {
-        display: block;
-        margin: 0 auto;
-        border: none;
-        background-color: var(--iris-color);
-        font-weight: 500;
-        line-height: 1.5;
-        letter-spacing: 0.04em;
-        color: var(--white-color);
-        border-radius: 4px;
-        min-width: 169px;
-        min-height: 56px;
-        transition: background-color var(--transition-options);
+    @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .section-hero {
+            background-image: linear-gradient(to bottom,
+                    rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)), url(../images/hero/bg@2x.jpg);
+        }
     }
-
-    .hero-button:hover,
-    .hero-button:focus {
-        background-color: var(--ocean-color);
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    }
+}
 
 /**
   |============================
-  | Section 2 Benefits section
-        @media (min-width: 320px) and (max-width: 428px)
+  |  Benefits section
+            @media (min-width: 320px) and (max-width: 768px)
+  |============================
+*/
+.section-benefits {
+    padding: 96px 0;
+}
+
+.benefits-list-item {
+    margin-bottom: 72px;
+}
+
+.benefits-list-item:last-child {
+    margin-bottom: 0;
+}
+
+.container-bg {
+    display: none;
+}
+
+.benefits-icon {
+    display: block;
+}
+
+.list-title {
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    margin-bottom: 8px;
+}
+
+.benefits-list-text {
+    font-weight: 500;
+}
+
+/**
+  |============================
+  | Benefits section
+          @media (min-width: 768px) and (max-width: 1157px) 
   |============================
 */
 
-    .section-benefits {
-        padding: 96px 0;
+@media only screen and (min-width: 768px) {
+    .benefits-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
     }
 
     .benefits-list-item {
-        margin-bottom: 72px;
-    }
-    
-    .benefits-list-item:last-child {
         margin-bottom: 0;
+        flex-basis: calc((100% - 24px) / 2);
     }
 
-    .container-bg {
-        display: none;
-    }
-
-    .benefits-icon {
-        display: block;
-    }
 
     .list-title {
-        text-transform: capitalize;
-        text-align: center;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 1.11;
-        margin-bottom: 8px;
+        text-align: left;
     }
 
-    .benefits-list-text {
-        font-weight: 500;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+   
 
 /**
   |============================
@@ -512,10 +741,10 @@ main {
 
 
 @media (min-width: 428px) and (max-width: 768px) {
-    .container {
+    /* .container {
         max-width: 768px;
         padding: 0 16px;
-    }
+    } */
 
 /**
   |============================
@@ -553,7 +782,6 @@ main {
 
 
 
-
 /**
   |============================
   |    @media (min-width: 768px) and (max-width: 1157px) 
@@ -561,143 +789,19 @@ main {
 */
 
 @media (min-width: 768px) and (max-width: 1157px) {
-
-/* Hero section */
-    .container {
-        max-width: 1157px;
-    }
-    .section-hero {
-        max-width: 768px;
-        background-image: linear-gradient(to bottom,
-                rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)),
-            url(../images/hero/hero-tablet.jpg);
-    }
-
-@media screen and (min-resolution: 192dpi),
-screen and (min-resolution: 2dppx) {
-    .section-hero {
-        background-image: linear-gradient(to bottom,
-                rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)), url(../images/hero/hero-tablet@2x.jpg);
-    }
-}
-
-/* Header section  */
-
-    .header-page-nav {
-        display: flex;
-        align-items: center;
-    }
-
-    .page-nav-list {
-        display: flex;
-        gap: 40px;
-        position: relative;
-    }
-
-    .page-nav-link {
-        display: block;
-        text-decoration: none;
-        font-weight: 500;
-        padding: 24px 0;
-        color: var(--navy-blue-color);
-        transition: color var(--transition-options);
-    }
-
-    .page-nav-link:hover,
-    .page-nav-link:focus {
-        color: var(--ocean-color);
-    }
-
-    .nav-line-color {
-        position: relative;
-        color: var(--ocean-color);
-    }
-
-    .nav-line-color::after {
-        position: absolute;
-        content: "";
-        left: 0;
-        bottom: -1px;
-        height: 4px;
-        width: 100%;
-        border-radius: 2px;
-        background-color: var(--ocean-color);
-    }
-    .contacts {
-        font-style: normal;
-    }
-    .contacts-list {
-        display: flex;
-        gap: 40px;
-    }
-
-    .contacts-link {
-        color: var(--slate-color);
-        text-decoration: none;
-        transition: color var(--transition-options);
-    }
-
-    .contacts-link:hover,
-    .contacts-link:focus {
-        color: var(--ocean-color);
-    }
-
-
-
-    .hero-title {
-        max-width: 496px;
-        font-size: 56px;
-        line-height: 1.07;
-    }
+      
+    
 /* Benefits section */
         
-    .benefits-list {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 24px;
-    }
-    .benefits-list-item {
-        flex-basis: calc((100% - 24px) / 2);
-    }
-
-    
-    .list-title {
-        text-align: left;
-    }
-        
+  
 }
 
 
-
-/**
-  |============================
-  |      @media (min-width: 1158px) {
-  |============================
-*/
 
 @media (min-width: 1158px) {
 
-/* Hero section */
+    
 
-    .section-hero {
-        max-width: 1440px;
-        padding: 188px 0;
-        background-image: linear-gradient(to bottom,
-                rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)),
-            url(../images/hero/bg.jpg);
-    }
-
-@media screen and (min-resolution: 192dpi),
-screen and (min-resolution: 2dppx) {
-    .section-hero {
-        background-image: linear-gradient(to bottom,
-                rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)), url(../images/hero/bg@2x.jpg);
-    }
-}
 
 /* Benefits section */
 
