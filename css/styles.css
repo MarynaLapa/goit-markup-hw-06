@@ -420,7 +420,7 @@ screen and (min-resolution: 2dppx) {
 /**
   |============================
   | Benefits section
-          @media (min-width: 768px) and (max-width: 1157px) 
+          @media (min-width: 768px) and (max-width: 1158px) 
   |============================
 */
 
@@ -428,7 +428,8 @@ screen and (min-resolution: 2dppx) {
     .benefits-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 24px;
+        row-gap: 72px;
+        column-gap: 24px;
     }
 
     .benefits-list-item {
@@ -436,178 +437,346 @@ screen and (min-resolution: 2dppx) {
         flex-basis: calc((100% - 24px) / 2);
     }
 
-
     .list-title {
         text-align: left;
     }
-
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+/**
+  |============================
+  | Benefits section
+          @media (min-width: 1158px) 
+  |============================
+*/
+@media only screen and (min-width: 1158px) {
     
-
-
-   
-
-/**
-  |============================
-  | Section 3 What are we doing
-  |============================
-*/
-    .section-made {
-        display: none;
+    .section-benefits {
+        padding: 120px 0;
     }
 
-/**
-  |============================
-  | Section 4 Our team
-        @media (min-width: 320px) and (max-width: 428px)
-  |============================
-*/
+    .benefits-list {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        gap: 24px;
+    }
 
-    .section-team {
+    .benefits-list-item {
+        display: block;
+        width: calc((100% - 72px) / 4);
+    }
+    
+    .container-bg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: var(--cloud-color);
-        padding: 96px 0;
+        margin-bottom: 8px;
+        padding: 24px 0;
+        border-radius: 4px;
     }
 
-    .team-title {
+    .icon {
+        display: block;
+        stroke-width: 0;
+        stroke: currentColor;
+        fill: currentColor;
+    }
+    .list-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
+
+    .benefits-list-text {
+        font-weight: 400;
+    }
+}
+
+/**
+  |============================
+  | What are we doing section
+        @media (min-width: 320px) and (max-width: 768px)
+        @media (min-width: 768px) and (max-width: 1158px)
+  |============================
+*/
+.section-made {
+    display: none;
+}
+
+/**
+  |============================
+  | What are we doing section  
+        @media (min-width: 1158px) 
+  |============================
+*/
+@media only screen and (min-width: 1158px) {
+    .section-made {
+        display: block;
+        padding-bottom: 120px;
+    }
+
+    .section-title {
         text-transform: capitalize;
         font-size: 36px;
         line-height: 1.11;
-        letter-spacing: 0.72px;
+        color: var(--navy-blue-color);
         text-align: center;
         margin-bottom: 72px;
     }
 
+    .card-img {
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    .made-list,
     .team-list {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 72px;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .made-items {
+        width: calc((100% - 48px) / 3);
+    }
+}
+
+/**
+  |============================
+  | Our team section
+        @media (min-width: 320px) and (max-width: 768px)
+  |============================
+*/
+.section-team {
+    background-color: var(--cloud-color);
+    padding: 96px 0;
+}
+
+.team-title {
+    text-transform: capitalize;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
+}
+
+.team-list-bg {
+    max-width: 264px;
+    display: block;
+    align-items: center;
+    background-color: var(--white-color);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team-card-text {
+    padding: 32px 0;
+    text-align: center;
+}
+
+.team-list-text {
+    margin-bottom: 8px;
+}
+
+.team-list-title {
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.025em;
+    margin-bottom: 8px;
+}
+
+.team-social-links {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.social-list-item {
+    flex-basis: calc((100% - 3*24px) / 4);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: var(--iris-color);
+    transition: background-color var(--transition-options);
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--ocean-color);
+}
+
+.networks {
+    fill: var(--cloud-color);
+}
+
+/**
+  |============================
+  | Our team section
+        @media (min-width: 768px) and (max-width: 1158px)  
+  |============================
+*/
+@media only screen and (min-width: 768px) {
+    .team-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 64px;
+        column-gap: 24px;
+        justify-content: center;
     }
 
     .team-list-bg {
-        max-width: 264px;
-        display: block;
-        align-items: center;
-        background-color: var(--white-color);
-        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-        border-radius: 0px 0px 4px 4px;
+        flex-basis: calc((100% - 24px) / 2);
+    }
+}
+
+/**
+  |============================
+  | Our team section
+        @media (min-width: 1158px) 
+  |============================
+*/
+@media only screen and (min-width: 1158px) {
+    .section-team {
+        padding: 120px 0;
     }
 
-    .team-card-text {
-        padding: 32px 0;
-        text-align: center;
-    }
-
-    .team-list-text {
-        margin-bottom: 8px;
-    }
-
-    .team-list-title {
-        text-transform: capitalize;
-        text-align: center;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.025em;
-        margin-bottom: 8px;
-    }
-
-    .team-social-links {
-        display: flex;
+    .team-list {
+        flex-wrap: nowrap;
         gap: 24px;
         justify-content: center;
     }
 
-    .social-list-item {
+    .team-list-bg {
         flex-basis: calc((100% - 3*24px) / 4);
     }
-
-    .social-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        padding: 12px;
-        border-radius: 50%;
-        background-color: var(--iris-color);
-        transition: background-color var(--transition-options);
-    }
-
-    .social-link:hover,
-    .social-link:focus {
-        background-color: var(--ocean-color);
-    }
-
-    .networks {
-        fill: var(--cloud-color);
 }
 
 /**
   |============================
-  | Section 5 Customers 
-        @media (min-width: 320px) and (max-width: 428px)
+  | Customers section
+        @media (min-width: 320px) and (max-width: 768px)
   |============================
 */
+.section-customers {
+    padding: 96px 0;
+}
 
-    .section-customers {
-        padding: 96px 0;
-    }
+.customers-title {
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+}
 
-    .customers-title {
-        font-size: 36px;
-        line-height: 1.11;
-        letter-spacing: 0.72px;
-        text-align: center;
-        text-transform: capitalize;
-        margin-bottom: 72px;
-    }
+.customers-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
+}
 
+.customers-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 168px;
+    height: 88px;
+    border: 1px solid var(--light-slate-color);
+    padding: 16px 32px;
+    border-radius: 4px;
+    color: var(--light-slate-color);
+    transition: border-color var(--transition-options), color var(--transition-options);
+}
+
+.custormers-svg {
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.customers-link:hover,
+.custormers-svg:hover,
+.customers-link:focus,
+.custormers-svg:focus {
+    color: var(--ocean-color);
+    border-color: var(--ocean-color);
+}
+
+@media only screen and (min-width: 428px) {
     .customers-list {
-        display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        gap: 72px;
+        row-gap: 72px;
+        column-gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .customers-list-items {
+        flex-basis: calc((100% - 16px) / 2);
     }
 
     .customers-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 168px;
-        height: 88px;
-        border: 1px solid var(--light-slate-color);
-        padding: 16px 32px;
-        border-radius: 4px;
-        color: var(--light-slate-color);
-        transition: border-color var(--transition-options), color var(--transition-options);
+        width: 100%;
     }
-
-    .custormers-svg {
-        fill: currentColor;
-        flex-shrink: 0;
-    }
-
-    .customers-link:hover,
-    .custormers-svg:hover,
-    .customers-link:focus,
-    .custormers-svg:focus {
-        color: var(--ocean-color);
-        border-color: var(--ocean-color);
 }
+/**
+  |============================
+  | Customers section 
+        @media (min-width: 768px) and (max-width: 1158px)  
+  |============================
+*/
+@media only screen and (min-width: 768px) {
+    .customers-list {
+        column-gap: 24px;
+    }
+
+    .customers-list-items {
+        flex-basis: calc((100% - 2*24px) / 3);
+    }
+}
+
+
+
+
+.footer-form-input {
+    width: 398px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
   |============================
@@ -740,7 +909,7 @@ screen and (min-resolution: 2dppx) {
 
 
 
-@media (min-width: 428px) and (max-width: 768px) {
+/* @media (min-width: 428px) and (max-width: 768px) {
     /* .container {
         max-width: 768px;
         padding: 0 16px;
@@ -752,10 +921,10 @@ screen and (min-resolution: 2dppx) {
         @media (min-width: 428px) and (max-width: 768px)
   |============================
 */
-    .customers-list {
+    /* .customers-list {
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
+        
         row-gap: 72px;
         column-gap: 16px;
     }
@@ -773,7 +942,7 @@ screen and (min-resolution: 2dppx) {
     }
 }
 
-
+ */
 
 
 
@@ -788,13 +957,6 @@ screen and (min-resolution: 2dppx) {
   |============================
 */
 
-@media (min-width: 768px) and (max-width: 1157px) {
-      
-    
-/* Benefits section */
-        
-  
-}
 
 
 
@@ -805,122 +967,14 @@ screen and (min-resolution: 2dppx) {
 
 /* Benefits section */
 
-    .section-benefits {
-        padding: 120px 0;
-    }
-
-    .list-title {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 1.2;
-        color: var(--navy-blue-color);
-        margin-bottom: 8px;
-    }
-
-    .benefits-list-item {
-        display: block;
-        width: calc((100% - 72px) / 4);
-    }
-
-    .container-bg {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--cloud-color);
-        margin-bottom: 8px;
-        padding: 24px 0;
-        border-radius: 4px;
-    }
-
-    .icon {
-        display: block;
-        stroke-width: 0;
-        stroke: currentColor;
-        fill: currentColor;
-    }
+    
 
 }
 
-/* Section 2 Benefits start */
-
-/* Section 2 Benefits end */
 
 
-/* Section 3 What are we doing start*/
-/* .section-made {
-    display: none;
-    padding-bottom: 120px;
-}
-.section-title {
-    text-transform: capitalize;
-    font-size: 36px;
-    line-height: 1.11;
-    color: var(--navy-blue-color);
-    text-align: center;
-    margin-bottom: 72px;
-}
-.card-img {
-    width: 100%;
-    flex-shrink: 0;
-}
-.made-list,
-.team-list {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-}
-.made-items {
-    width: calc((100% - 48px) / 3);
-} */ */
-/* Section 3 What are we doing end*/
+  
 
-
-/* Section 4 Our team start
-.section-team {
-    background-color: var(--cloud-color);
-    padding: 120px 0;    
-}    
-.team-list-bg {
-    background-color: var(--white-color);
-    display: block;
-    align-items: center;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 0px 0px 4px 4px;
-    width: calc((100% - 72px) / 4);
-}
-.team-card-text {
-    padding: 32px 0;
-    text-align: center;
-}
-.team-list-text {
-    margin-bottom: 8px;
-}
-.team-social-links {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-}
-.social-list-item {
-    flex-basis: calc((100% - 3*24px) / 4);
-}
-.social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--iris-color);
-    transition: background-color var(--transition-options);
-}
-.social-link:hover,
-.social-link:focus {
-    background-color: var(--ocean-color);
-}
-.networks {
-    fill: var(--cloud-color);
-}
-/* Section 4 Our team end*/
 
 
 /**
