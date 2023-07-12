@@ -921,11 +921,17 @@ screen and (min-resolution: 2dppx) {
 */
 @media only screen and (min-width: 768px){
     
+    .footer {
+        padding-left: 92px;
+    }
+    
     .footer-container {
+        width: 768px;
         flex-direction: row;
         flex-wrap: wrap;
         row-gap: 72px;
         column-gap: 24px;
+        align-items: baseline;
     }
     .footer-logo, 
     .social-links-text,
