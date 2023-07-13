@@ -1180,11 +1180,13 @@ screen and (min-resolution: 2dppx) {
     background-color: var(--navy-blue-modal-color);
 
 }
+
 .backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
+
 .modal-callback {
     position: absolute;
     min-height: 100px;
@@ -1200,10 +1202,12 @@ screen and (min-resolution: 2dppx) {
     transition: transform var(--transition-options);
     padding: 72px 24px 24px;
 } 
+
 .backdrop.is-hidden .modal-callback {
     opacity: 0;
     transform: translateX(-50%) translateY(-70%);
 }
+
 .close-button {
     display: flex;
     justify-content: center;
@@ -1219,26 +1223,31 @@ screen and (min-resolution: 2dppx) {
     padding: 0;
     transition: background-color var(--transition-options), border var(--transition-options);
 }
+
 .icon-btn-close {
     transition: fill var(--transition-options);
 }
+
 .close-button:hover,
 .close-button:focus {
     background-color: var(--ocean-color);
     fill: var(--white-color);
     border: none;
 }
+
 .modal-form {
     width: 360px;
     display: flex;
     flex-direction: column;
 }
+
 .modal-text {
     font-weight: 500;
     color: var(--navy-blue-color);
     text-align: center;
     margin-bottom: 16px;
 }
+
 .modal-form-label {
     display: block;
     color: var(--light-slate-color); 
@@ -1248,13 +1257,26 @@ screen and (min-resolution: 2dppx) {
     letter-spacing: 0.04em;
     margin-bottom: 4px;
 }
+
 .form-row {
     margin-bottom: 8px;
 }
+
+@media only screen and (max-width: 427px) {
+    .modal-callback {
+        width: 290px;
+    }
+
+    .modal-form {
+        width: 100%;
+    }
+}
+
 .form-wrap {
     position: relative;
     height: 40px;
 }
+
 .form-icon {
     fill: currentColor;
     position: absolute;
@@ -1263,6 +1285,7 @@ screen and (min-resolution: 2dppx) {
     transform: translateY(-50%);
     transition: fill var(--transition-options);
 }
+
 .modal-form-input {
     width: 100%;
     height: 40px;
@@ -1273,15 +1296,19 @@ screen and (min-resolution: 2dppx) {
     transition: border-color var(--transition-options);
     background-color: transparent;
 }
+
 .modal-form-input:focus {
     border-color: var(--iris-color);
 }
+
 .modal-form-input:focus + .form-icon {
     fill: var(--iris-color);
 }
+
 .comment-container {
     margin-bottom: 16px;
 }
+
 .modal-form-comment {
     width: 100%;
     height: 120px;
@@ -1298,15 +1325,18 @@ screen and (min-resolution: 2dppx) {
     background-color: transparent;
     transition: border-color var(--transition-options);
 }
+
 .modal-form-comment:focus {
     border-color: var(--iris-color);
 }
+
 .custom-checkbox {
     height: 16px;
     display: inline-flex;
     align-items: center;
     margin-bottom: 24px;
 }
+
 .modal-form-checkbox {
     color: var(--light-slate-color);
     font-size: 12px;
@@ -1314,6 +1344,7 @@ screen and (min-resolution: 2dppx) {
     letter-spacing: 0.04em;
     user-select: none;
 }
+
 .checkbox {
     display: inline-flex;
     align-items: center;
@@ -1327,23 +1358,28 @@ screen and (min-resolution: 2dppx) {
     transition: border var(--transition-options), background-color var(--transition-options), fill var(--transition-options);
     fill: transparent;
 }
+
 .icon-checkbox {
    opacity: 0; 
    transform: scale(0);
    transition: opacity var(--transition-options) 150ms, transform var(--transition-options) 150ms; 
 }
+
 .checkbox-input:checked + .modal-form-checkbox > .checkbox {
     border: none;
     background-color: var(--ocean-color);
 }
+
 .checkbox-input:checked + .modal-form-checkbox > .checkbox .icon-checkbox {
     opacity: 1;
     transform: scale(1);
     fill: var(--cloud-color);
 }
+
 .checkbox-link {
     color: var(--iris-color);
 }
+
 .form-button {
     display: block;
     color: var(--white-color);
@@ -1362,6 +1398,7 @@ screen and (min-resolution: 2dppx) {
     margin: 0 auto;
     transition: background-color var(--transition-options);
 }
+
 .form-button:hover,
 .form-button:focus {
     background-color: var(--ocean-color);
@@ -1391,13 +1428,13 @@ screen and (min-resolution: 2dppx) {
     border: 1px solid rgba(0, 0, 0, 0.10);
     transition: background-color var(--transition-options), border var(--transition-options);
 }
-@media screen and :not(hover) {
+/* @media screen and not (:hover) {
     .menu-toggle-close:active,
     .menu-toggle-close:focus {
         background-color: var(--ocean-color);
         border: none;
     }
-}
+} */
 .menu-toggle-close:hover,
 .menu-toggle-close:focus {
     background-color: var(--ocean-color);
