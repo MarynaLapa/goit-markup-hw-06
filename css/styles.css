@@ -1374,17 +1374,34 @@ screen and (min-resolution: 2dppx) {
 */
 
 .menu-toggle {
-    min-height: 40px;
-    min-width: 40px;
+    min-height: 24px;
+    min-width: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
     padding: 0;
-    background-color: transparent;
     border: none;
-    border-radius: 50%;
+    background-color: transparent;
     outline: none;
+    
+}
+.menu-toggle-close {
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    transition: background-color var(--transition-options), border var(--transition-options);
+}
+@media screen and :not(hover) {
+    .menu-toggle-close:active,
+    .menu-toggle-close:focus {
+        background-color: var(--ocean-color);
+        border: none;
+    }
+}
+.menu-toggle-close:hover,
+.menu-toggle-close:focus {
+    background-color: var(--ocean-color);
+    border: none;
 }
 
 @media (min-width: 768px) {
@@ -1392,7 +1409,9 @@ screen and (min-resolution: 2dppx) {
         display: none;
     }
 }
-
+.menu-toggle-icon {
+    stroke: var(--navy-blue-color);
+}
 .menu-toggle:hover,
 .menu-toggle:focus {
     background-color: rgba(0, 0, 0, 0.1);
@@ -1404,12 +1423,13 @@ screen and (min-resolution: 2dppx) {
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 32px;
-    background-color: #3f51b5;
+    padding: 80px 0 40px 40px;
+    background-color: var(--white-color);
     z-index: 999;
-
+    display: flex;
+    flex-direction: column;
     transform: translateX(100%);
-    transition: transform 250ms ease-in-out;
+    transition: transform var(--transition-options);
 }
 
 .menu-container.is-open {
@@ -1418,47 +1438,22 @@ screen and (min-resolution: 2dppx) {
 
 .menu-container .menu-toggle {
     position: absolute;
-    top: 16px;
-    right: 16px;
-    color: #fff;
+    top: 24px;
+    right: 24px;
+    background-color: var(--cornflower-color);
 }
 
-.mobile-menu {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+.menu-toggle-nav {
+    margin-bottom: auto;
 }
 
-.mobile-menu .link {
-    display: block;
-    padding: 10px;
-    color: #fff;
-    text-decoration: none;
-}
-
-
-/* .menu-contrainer {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-}
-.menu-wrap {
-    padding: 80px 35px 40px 40px;
-}
-.menu-nav {
-    margin-bottom: 284px;
-}
-.menu-nav-items {
+.menu-toggle-items:not(:last-child) {
     margin-bottom: 40px;
 }
-.menu-nav-items:last-child {
-    margin-bottom: 0;
-}
-.menu-nav-link {
+
+.menu-text-bold {
     text-decoration: none;
     color: var(--navy-blue-color);
-}
-.menu-text-bold {
     font-size: 36px;
     font-weight: 700;
     line-height: 1.1;
@@ -1468,16 +1463,20 @@ screen and (min-resolution: 2dppx) {
 .menu-color {
     color: var(--ocean-color);
 }
+
 .menu-contacts {
     font-style: normal;
     margin-bottom: 48px;
 }
+
 .menu-contacts-items {
     margin-bottom: 40px;
 }
+
 .menu-contacts-items:last-child {
     margin-bottom: 0;
 }
+
 .menu-contacts-link {
     color: var(--slate-color);
     text-decoration: none;
@@ -1487,10 +1486,23 @@ screen and (min-resolution: 2dppx) {
     line-height: 1.2;    
     letter-spacing: 0.4px;
 }
+
 .menu-networks {
     display: flex;
     gap: 56px;
 }
-.menu-social-items {
-    flex-basis: calc((100% - 3*56px) / 4);
-} */
+
+@media only screen and (max-width: 427px) {
+    .contacts-link {
+        font-size: 28px;
+    }
+
+    .menu-container {
+        padding-left: 28px;
+    }
+
+    .menu-networks {
+        gap: 20px;
+    }
+}
+
