@@ -992,11 +992,12 @@ screen and (min-resolution: 2dppx) {
 .button-list {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
-    /* margin-bottom: 72px; */
-    row-gap: 16px;
-    column-gap: 24px;
+    row-gap: 16px; 
     margin-bottom: 48px;
+}
+
+.button-items {
+    margin-right: 24px;
 }
 
 .filter-button {
@@ -1008,7 +1009,7 @@ screen and (min-resolution: 2dppx) {
     text-align: center;
     color: var(--iris-color);
     cursor: pointer;
-    padding: 12px 24px;
+    padding: 8px 16px;
     transition: color var(--transition-options),background-color var(--transition-options), border-color 250ms var(--transition-options), box-shodow 250ms var(--transition-options);  
 }
 
@@ -1096,9 +1097,12 @@ screen and (min-resolution: 2dppx) {
     .button-list {
         flex-wrap: nowrap;
         flex-direction: row;
-        gap: 24px;
+        /* gap: 24px; */
         justify-content: center;
         margin-bottom: 64px;
+    }
+    .filter-button {
+        padding: 12px 24px;
     }
 
     .card-img {
